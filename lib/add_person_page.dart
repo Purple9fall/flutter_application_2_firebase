@@ -2,6 +2,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class AddPersonPage extends StatefulWidget {
+  const AddPersonPage({super.key});
+
   @override
   _AddPersonPageState createState() => _AddPersonPageState();
 }
@@ -21,7 +23,7 @@ class _AddPersonPageState extends State<AddPersonPage> {
   final _houseNumberController = TextEditingController();
 
   // List of schools
-  List<Map<String, dynamic>> _schools = [];
+  final List<Map<String, dynamic>> _schools = [];
 
   // Controllers for adding new school
   final _schoolNameController = TextEditingController();
@@ -399,7 +401,7 @@ class _AddPersonPageState extends State<AddPersonPage> {
                             ),
                           ),
                         );
-                      }).toList(),
+                      }),
                     ],
                   ],
                 ),

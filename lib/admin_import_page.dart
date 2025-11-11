@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'add_person_page.dart';
 
 class AdminImportPage extends StatefulWidget {
+  const AdminImportPage({super.key});
+
   @override
   _AdminImportPageState createState() => _AdminImportPageState();
 }
@@ -113,7 +115,7 @@ class _AdminImportPageState extends State<AdminImportPage> {
                 itemCount: snapshot.docs.length,
                 itemBuilder: (context, index) {
                   final doc = snapshot.docs[index];
-                  final data = doc.data() as Map<String, dynamic>;
+                  final data = doc.data();
                   return ListTile(
                     leading: CircleAvatar(child: Text('${index + 1}')),
                     title: Text(data['name'] ?? ''),

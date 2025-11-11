@@ -3,12 +3,11 @@ import 'package:flutter/material.dart';
 import 'search_page.dart';
 import 'login_screen.dart';
 import 'admin_import_page.dart';
-import 'add_person_page.dart';
 
 class HomeScreen extends StatelessWidget {
   final User? user;
 
-  HomeScreen({required this.user});
+  const HomeScreen({super.key, required this.user});
 
   Future<void> _logout(BuildContext context) async {
     await FirebaseAuth.instance.signOut();
